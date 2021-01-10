@@ -5,7 +5,7 @@ interface Props {
     isOpened:boolean,
 }
 
-function Menu({isOpened}: Props): ReactElement {
+const Menu = ({isOpened}: Props): ReactElement => {
     return (
         <div className={`menu ${isOpened? "menu__opened" : ""}`}>
             <Elem name="Google" url="http://google.com"/>

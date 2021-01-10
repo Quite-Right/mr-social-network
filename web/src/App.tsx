@@ -1,17 +1,28 @@
 import React from 'react';
 import Header from "./Components/Header/Header";
-import Main from "./Components/Main/Main";
+import Screen from "./Components/Screen/Screen";
 import Footer from "./Components/Footer/Footer";
 import './Scss/App.scss';
 
-function App() {
+
+const App = () => {
   return (
     <div className="App">
       <Header />
-      <Main />
+      <Screen />
       {/* <Footer /> */}
     </div>
   );
 }
 
 export default App;
+
+// function App() {
+//   return (
+//     <div className="App">
+//       <Header />
+//       <Screen />
+//       {/* <Footer /> */}
+//     </div>
+//   );
+// }

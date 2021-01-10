@@ -1,11 +1,12 @@
 import React, { ReactElement } from 'react'
-import uwu from '../../Images/main.gif';
+import uwu from '../../../Images/main.gif';
 
 interface Props {
     
 }
 
-function Main({}: Props): ReactElement {
+
+const Main = ({}: Props): ReactElement => {
     return (
         <div className="main">
             

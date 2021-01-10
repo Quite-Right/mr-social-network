@@ -8,7 +8,7 @@ interface Props {
     
 }
 
-function Header({}: Props): ReactElement {
+const Header = ({}: Props): ReactElement => {
     const [toggle, setToggle] = useState<boolean>(false);
     return (
         <>
