@@ -1,0 +1,22 @@
+version: "3"
+
+volumes:
+  mongodb_volume:
+
+services:
+  server:
+    build: backend/
+    restart: always
+    environment:
+      - MONGO_DB_ADDR=mongodb
+      - APP_PORT=8080
+    ports:
+      - 8080:8080
+  mongodb:
+    image: mongo:latest
+    volumes:
+      - mongodb_volume:/data/db
+    restart: always
+    ports:
+      - 27017:27017
+    
