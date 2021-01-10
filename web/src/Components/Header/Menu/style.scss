@@ -1,0 +1,15 @@
+.menu{
+    position: absolute;
+    width: 250px;
+    margin-top: 50px;
+    // height: calc(100vh - 50px);
+    background:#0083ff;
+    display: none;
+    // transform: translateY(-100%);
+    // transition: 1s;
+    z-index: 4;
+    &__opened{
+        display: block;
+        // transform: translateY(0%);
+    }
+}

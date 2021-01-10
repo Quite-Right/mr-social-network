@@ -1,0 +1,27 @@
+.header{
+    height: 50px;
+    width: 100vw;
+    // position: relative;
+    // z-index: 9;
+    // color: $three-pink;
+    color: $white;
+    @include flex-row;
+    
+    //background: linear-gradient( 90deg, $one-blue, $two-blue);
+    //background: linear-gradient(to bottom right, $one-blue, $comb-three_four);
+    // background: linear-gradient(to bottom right, $one-blue, $one-blue, $one-blue, $comb-three_four);
+    background: $four-blue;
+
+    &__menu{
+        @include flex-row;
+        padding: 0 10px;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    &__logo{
+        font-size: 24px;
+        padding: 0 10px;
+        @include glow;
+    }
+}

@@ -1,0 +1,16 @@
+.logIn{
+    width: 200px;
+    @include flex-row;
+    justify-content: flex-end;
+    &-button{
+        padding: 5px 10px;
+        margin: 0 10px;
+        background: black;
+        border-radius: 15px;
+        &:hover{
+            background: grey;
+            cursor: pointer;
+        }
+        
+    }
+}

@@ -1,0 +1,8 @@
+.main{
+    width: 100vw;
+    height: calc(100vh - 50px);
+    @include flex-row;
+    justify-content: space-around;
+    padding: 0 auto;
+    background: $one-blue;
+}

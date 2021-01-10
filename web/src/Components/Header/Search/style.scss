@@ -1,0 +1,21 @@
+.search{
+    @include flex-row;
+    margin: 0 auto;
+    width: 600px;
+    height: 30px;
+    border-radius: 15px;
+    background: $white;
+    box-shadow: 0 0 10px $comb-two_one;
+    // box-shadow: 0 0 10px #ff4da6;
+    
+    color: $comb-two_five;
+    padding: 0 15px;
+
+    input{
+        border:none;
+        height: 100%;
+        width: 90%;
+        background: transparent;
+        outline: none;
+    }
+}
