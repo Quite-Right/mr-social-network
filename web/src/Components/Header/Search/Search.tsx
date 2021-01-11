@@ -4,7 +4,7 @@ interface Props {
     
 }
 
-function Search({}: Props): ReactElement {
+const Search = ({}: Props): ReactElement => {
     return (
         <div className="search">
             <input type="text"/> 

@@ -6,8 +6,7 @@ import Guest from "./Guest"
 interface Props {
     loggedIn:boolean,
 }
-
-function LogIn({loggedIn}: Props): ReactElement {
+const  LogIn = ({loggedIn}: Props): ReactElement => {
     if (loggedIn){
         return <User />
     } else{

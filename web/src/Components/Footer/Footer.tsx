@@ -3,8 +3,7 @@ import React, { ReactElement } from 'react'
 interface Props {
     
 }
-
-function Footer({}: Props): ReactElement {
+const Footer = ({}: Props): ReactElement => {
     return (
         <div>
             Footer

@@ -4,7 +4,7 @@ interface Props {
     
 }
 
-function User({}: Props): ReactElement {
+const User = ({}: Props): ReactElement => {
     return(
         <div className="logIn">
             <div className="logIn-button">Profile</div>

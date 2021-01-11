@@ -1,17 +1,36 @@
 import React from 'react';
+import { BrowserRouter as Router, useLocation } from "react-router-dom";
+
 import Header from "./Components/Header/Header";
-import Main from "./Components/Main/Main";
+import Screen from "./Components/Screen/Screen";
 import Footer from "./Components/Footer/Footer";
 import './Scss/App.scss';
 
-function App() {
+const Wrapper =() => {
+  return (
+  <Router>
+    <App />
+  </Router>)
+}
+
+const App = () => {
   return (
     <div className="App">
       <Header />
-      <Main />
+      <Screen />
       {/* <Footer /> */}
     </div>
   );
 }
 
-export default App;
+export default Wrapper;
+
+// function App() {
+//   return (
+//     <div className="App">
+//       <Header />
+//       <Screen />
+//       {/* <Footer /> */}
+//     </div>
+//   );
+// }
