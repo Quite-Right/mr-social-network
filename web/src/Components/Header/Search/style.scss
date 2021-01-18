@@ -14,8 +14,13 @@
     input{
         border:none;
         height: 100%;
-        width: 90%;
+        width: 580px;
         background: transparent;
         outline: none;
+    }
+    &__icon{
+        height: 20px;
+        width: 20px;
+        cursor: pointer;
     }
 }

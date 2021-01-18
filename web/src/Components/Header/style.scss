@@ -20,6 +20,8 @@
         }
     }
     &__logo{
+        color: $white;
+        text-decoration: none;
         font-size: 24px;
         padding: 0 10px;
         @include glow;

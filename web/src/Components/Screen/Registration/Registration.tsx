@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Formik, Form, Field, ErrorMessage } from 'formik'
 import * as Yup from 'yup'
-import showPassword from "../../../Images/menu.png"
+import { Visibility, VisibilityOff } from '@styled-icons/material-rounded'
 
 interface Props {
 }
@@ -103,19 +103,22 @@ const Registration = (props: Props) => {
               <label htmlFor="password" className="required">Password</label>
               <div className="registration__input__block">
                 <Field className="registration__input__block__field" type={showHidePassword ? "text" : "password"} id="password" name="password" placeholder="Enter your password" validate={validatePassword} />
-                <img className="registration__input__block__img" src={showPassword} alt="showPassword" onClick={() => changeShowHidePassword(!showHidePassword)}/>
+                {showHidePassword   ? <Visibility className="registration__input__block__img" onClick={() => changeShowHidePassword(!showHidePassword)} title="Hide password" />
+                                    : <VisibilityOff className="registration__input__block__img" onClick={() => changeShowHidePassword(!showHidePassword)} title="Show password" />}
               </div>
               <ErrorMessage name="password" component="div" className="registration__input__error" />
             </div>
             <div className="registration__input">
               <label htmlFor="password" className="required">Password confirm</label>
               <div className="registration__input__block">
-                <Field  className="registration__input__block__field" type={showHidePasswordConfirm ? "text" : "password"} id="passwordConfirm" placeholder="Enter your password again" name="passwordConfirm" />
-                <img className="registration__input__block__img" src={showPassword}  alt="showPassword" onClick={() => changeShowHidePasswordConfirm(!showHidePasswordConfirm)}/>
+                <Field className="registration__input__block__field" type={showHidePasswordConfirm ? "text" : "password"} id="passwordConfirm" placeholder="Enter your password again" name="passwordConfirm" />
+                {showHidePasswordConfirm  ? <Visibility className="registration__input__block__img" onClick={() => changeShowHidePasswordConfirm(!showHidePasswordConfirm)} title="Hide password" />
+                                          : <VisibilityOff className="registration__input__block__img" onClick={() => changeShowHidePasswordConfirm(!showHidePasswordConfirm)} title="Show password" />}
+
               </div>
               <ErrorMessage name="passwordConfirm" component="div" className="registration__input__error" />
             </div>
-            
+
             <button type="submit" className="registration__button">Sing up</button>
             <div>Have an account? <a href="/login" className="htmllink">Log in.</a></div>
           </Form>

@@ -30,6 +30,12 @@
                 height: 20px;
             }
         }
+        &__error{
+            color: red;
+            font-size: 10px;
+            position: absolute;
+            bottom: -15px;
+        }
     } 
     &__button{
         color: black;
