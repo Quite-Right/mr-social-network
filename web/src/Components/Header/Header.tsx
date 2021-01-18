@@ -8,7 +8,7 @@ interface Props {
     
 }
  
-const Header = ({}: Props): ReactElement => {
+const Header = (props: Props): ReactElement => {
     const [isOpened, setIsOpened] = useState<boolean>(false);
     const data = [
         {

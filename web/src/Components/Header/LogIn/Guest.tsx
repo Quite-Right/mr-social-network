@@ -1,9 +1,9 @@
-import React, { ReactElement, useState } from 'react'
+import React, { ReactElement } from 'react'
 
 interface Props {
 }
 
-const Guest = ({}: Props): ReactElement => {
+const Guest = (props: Props): ReactElement => {
     return(
         <div className="logIn">
             <div className="logIn-button">Log In</div>

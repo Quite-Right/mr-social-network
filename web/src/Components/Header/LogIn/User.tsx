@@ -1,10 +1,10 @@
-import React, { ReactElement, useState } from 'react'
+import React, { ReactElement } from 'react'
 
 interface Props {
     
 }
 
-const User = ({}: Props): ReactElement => {
+const User = (props: Props): ReactElement => {
     return(
         <div className="logIn">
             <div className="logIn-button">Profile</div>

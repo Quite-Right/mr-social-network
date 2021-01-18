@@ -5,7 +5,7 @@ interface Props {
 }
 
 
-const News = ({}: Props): ReactElement => {
+const News = (props: Props): ReactElement => {
     return (
         <div className="news">
             
