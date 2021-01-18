@@ -6,7 +6,7 @@ interface Props {
 }
 
 
-const Main = ({}: Props): ReactElement => {
+const Main = (props: Props): ReactElement => {
     return (
         <div className="main">
             

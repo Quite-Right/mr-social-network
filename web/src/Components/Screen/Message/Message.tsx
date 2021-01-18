@@ -3,7 +3,7 @@ import React, { ReactElement } from 'react'
 interface Props {
     
 }
-const Message = ({}: Props): ReactElement => {
+const Message = (props: Props): ReactElement => {
     return (
         <div className="message">
             

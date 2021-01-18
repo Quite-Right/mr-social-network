@@ -11,17 +11,19 @@ import NotFound from './NotFound/NotFound';
 interface Props {
     
 }
-
-const Screen = ({}: Props): ReactElement => {
+const Screen = (props: Props): ReactElement => {
     return (
-        <Switch>
-            <Route exact path='/login' component={LogIn} />
-            <Route exact path='/' component={Main} />
-            <Route path='/message' component={Message} />
-            <Route path='/news' component={News} />
-            <Route exact path='/registration' component={Registration} />
-            <Route component={NotFound} />
-        </Switch>
+        <div className="screen">
+            <Switch>
+                <Route exact path='/login' component={LogIn} />
+                <Route exact path='/' component={Main} />
+                <Route path='/message' component={Message} />
+                <Route path='/news' component={News} />
+                <Route exact path='/registration' component={Registration} />
+                <Route component={NotFound} />
+            </Switch>
+        </div>
+        
     )
 }
 
