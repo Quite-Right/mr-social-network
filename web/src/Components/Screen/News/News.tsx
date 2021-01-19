@@ -1,16 +1,12 @@
 import React, { ReactElement } from 'react'
 
 interface Props {
-    
 }
-
 
 const News = (props: Props): ReactElement => {
     return (
         <div className="news">
-            
-            News
-            
+            News 
         </div>
     )
 }

@@ -54,14 +54,3 @@
         }
     }
 }
-
-
-.htmllink{
-    color: green;
-    &:hover{
-        color:lightgreen;
-    }
-    &:active{
-        color:darkgreen;
-    }
-}

@@ -1,7 +1,6 @@
 import React, { ReactElement } from 'react'
 
 interface Props {
-    
 }
 
 const User = (props: Props): ReactElement => {

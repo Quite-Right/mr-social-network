@@ -3,7 +3,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 
 import Header from "./Components/Header/Header";
 import Screen from "./Components/Screen/Screen";
-//import Footer from "./Components/Footer/Footer";
+
 import './Scss/App.scss';
 
 const Wrapper =() => {
@@ -23,13 +23,3 @@ const App = () => {
 }
 
 export default Wrapper;
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <Header />
-//       <Screen />
-//       {/* <Footer /> */}
-//     </div>
-//   );
-// }

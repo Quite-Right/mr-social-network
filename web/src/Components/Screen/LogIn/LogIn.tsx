@@ -1,12 +1,10 @@
 import React, { useState } from 'react'
 import { Formik, Form, Field, ErrorMessage } from 'formik'
 import * as Yup from 'yup'
+import { Link } from 'react-router-dom'
+
 
 import { Visibility, VisibilityOff } from '@styled-icons/material-rounded'
-
-//src={showHidePassword ? <VisibilityOff /> : <Visibility />}
-// <img className="login__input__block__img" src={showHidePassword ? <VisibilityOff /> : <Visibility />} alt="showPassword" onClick={() => changeShowHidePassword(!showHidePassword)} />
-
 
 const validationSchema = Yup.object({
     login: Yup.string()
@@ -15,9 +13,7 @@ const validationSchema = Yup.object({
         .required('You need to enter your password'),
 })
 
-
 interface Props {
-
 }
 
 const LogIn = (props: Props) => {
@@ -37,13 +33,11 @@ const LogIn = (props: Props) => {
             {formik => {
                 return (
                     <Form className="login">
-
                         <div className="login__input">
                             <label htmlFor="login">Login</label>
                             <Field className="login__input__block" type="text" id="login" name="login" placeholder="Enter your login" />
                             <ErrorMessage name="login" component="div" className="login__input__error" />
                         </div>
-
                         <div className="login__input">
                             <label htmlFor="password">Password</label>
                             <div className="login__input__block">
@@ -53,10 +47,8 @@ const LogIn = (props: Props) => {
                             </div>
                             <ErrorMessage name="password" component="div" className="login__input__error" />
                         </div>
-
-
                         <button type="submit" className="login__button">Sing up</button>
-                        <div>Don't have an account? <a href="/registration" className="htmllink">Sing up.</a></div>
+                        <div>Don't have an account? <Link className="simple-link" to="/registration">Sing up.</Link></div>
                     </Form>
                 )
             }}
