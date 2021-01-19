@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { Formik, Form, Field, ErrorMessage } from 'formik'
 import * as Yup from 'yup'
+import { Link } from 'react-router-dom'
+
 import { Visibility, VisibilityOff } from '@styled-icons/material-rounded'
 
 interface Props {
@@ -44,8 +46,7 @@ function UsedLogin(value: string) {
     if (JSON.stringify(value) === JSON.stringify(item)) {
       error = "Login exist"
     }
-  }
-  );
+  });
   return error;
 }
 
@@ -74,11 +75,9 @@ const Registration = (props: Props) => {
         });
       }}
     >
-      {/* <div className="registration__input__field"></div> */}
       {formik => {
         return (
           <Form className="registration">
-
             <div className="registration__input">
               <label htmlFor="login" className="required">Login</label>
               <Field className="registration__input__block" type="text" id="login" name="login" placeholder="Enter your login" validate={UsedLogin} />
@@ -89,7 +88,6 @@ const Registration = (props: Props) => {
               <Field className="registration__input__block" type="email" id="email" name="email" placeholder="Enter your email" />
               <ErrorMessage name="email" component="div" className="registration__input__error" />
             </div>
-
             <div className="registration__input">
               <label htmlFor="name">Name</label>
               <Field className="registration__input__block" type="text" id="name" name="name" placeholder="Enter your name" />
@@ -98,13 +96,12 @@ const Registration = (props: Props) => {
               <label htmlFor="surname">Surname</label>
               <Field className="registration__input__block" type="text" id="surname" name="surname" placeholder="Enter your surname" />
             </div>
-
             <div className="registration__input">
               <label htmlFor="password" className="required">Password</label>
               <div className="registration__input__block">
                 <Field className="registration__input__block__field" type={showHidePassword ? "text" : "password"} id="password" name="password" placeholder="Enter your password" validate={validatePassword} />
-                {showHidePassword   ? <Visibility className="registration__input__block__img" onClick={() => changeShowHidePassword(!showHidePassword)} title="Hide password" />
-                                    : <VisibilityOff className="registration__input__block__img" onClick={() => changeShowHidePassword(!showHidePassword)} title="Show password" />}
+                {showHidePassword ? <Visibility className="registration__input__block__img" onClick={() => changeShowHidePassword(!showHidePassword)} title="Hide password" />
+                  : <VisibilityOff className="registration__input__block__img" onClick={() => changeShowHidePassword(!showHidePassword)} title="Show password" />}
               </div>
               <ErrorMessage name="password" component="div" className="registration__input__error" />
             </div>
@@ -112,15 +109,13 @@ const Registration = (props: Props) => {
               <label htmlFor="password" className="required">Password confirm</label>
               <div className="registration__input__block">
                 <Field className="registration__input__block__field" type={showHidePasswordConfirm ? "text" : "password"} id="passwordConfirm" placeholder="Enter your password again" name="passwordConfirm" />
-                {showHidePasswordConfirm  ? <Visibility className="registration__input__block__img" onClick={() => changeShowHidePasswordConfirm(!showHidePasswordConfirm)} title="Hide password" />
-                                          : <VisibilityOff className="registration__input__block__img" onClick={() => changeShowHidePasswordConfirm(!showHidePasswordConfirm)} title="Show password" />}
-
+                {showHidePasswordConfirm ? <Visibility className="registration__input__block__img" onClick={() => changeShowHidePasswordConfirm(!showHidePasswordConfirm)} title="Hide password" />
+                  : <VisibilityOff className="registration__input__block__img" onClick={() => changeShowHidePasswordConfirm(!showHidePasswordConfirm)} title="Show password" />}
               </div>
               <ErrorMessage name="passwordConfirm" component="div" className="registration__input__error" />
             </div>
-
             <button type="submit" className="registration__button">Sing up</button>
-            <div>Have an account? <a href="/login" className="htmllink">Log in.</a></div>
+            <div>Have an account? <Link className="simple-link" to="/login">Log in.</Link></div>
           </Form>
         )
       }}

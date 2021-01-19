@@ -1,9 +1,8 @@
 import React, { ReactElement } from 'react'
-import { Formik, Form, Field, ErrorMessage } from 'formik'
+import { Formik, Form, Field } from 'formik'
 import { Search as SearchIcon } from '@styled-icons/material'
 
 interface Props {
-
 }
 
 const Search = (props: Props): ReactElement => {
@@ -20,35 +19,12 @@ const Search = (props: Props): ReactElement => {
         >
             {formik => {
                 return (
-                    <>
-
-                        <Form className="search" >
-                            
-                                <Field type="text" id="search" name="search" placeholder="Search..."/>
-                                <SearchIcon className="search__icon" type="submit" onClick={formik.submitForm} />
-                        </Form>
-
-
-
-
-
-                        {/* <div className="search">
-                            <input type="text" />
-                            <SearchIcon className="search__icon" onClick={()=>console.log(1) } />
-                        </div> */}
-
-
-
-
-
-                    </>
-
-
-
+                    <Form className="search" >
+                        <Field className="search__field" type="text" id="search" name="search" placeholder="Search..." />
+                        <SearchIcon className="search__icon" type="submit" onClick={formik.submitForm} />
+                    </Form>
                 )
             }}
-
-
         </Formik>
     )
 }

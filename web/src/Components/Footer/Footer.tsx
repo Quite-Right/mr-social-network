@@ -1,14 +1,15 @@
-import React, { ReactElement } from 'react'
+import React from 'react'
 
 interface Props {
     
 }
-const Footer = ({}: Props): ReactElement => {
+
+const Footer = (props: Props) => {
     return (
-        <div>
+        <div className="footer">
             Footer
         </div>
     )
 }
 
-export default Footer;
+export default Footer

@@ -2,24 +2,19 @@
     position: absolute;
     width: 250px;
     margin-top: 50px;
-    // height: calc(100vh - 50px);
     background:#0083ff;
     display: none;
-    // transform: translateY(-100%);
-    // transition: 1s;
     z-index: 4;
     &_opened{
         display: block;
-        // transform: translateY(0%);
     }
-    &_link{
+    &__link{
         padding: 5px;
         text-decoration:none;
         color: white;
         display: block;
         border-bottom: 1px solid transparent;
         &:hover{
-            // color:black;
             border-bottom: 1px solid black;
             background: linear-gradient(135deg, #0083ff, #0083ff,  $one-blue);     
         }

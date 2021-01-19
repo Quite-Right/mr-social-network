@@ -17,7 +17,7 @@ const Menu = ({isOpened, setIsOpened, data}: Props): ReactElement => {
         <div className={`menu ${isOpened? "menu_opened" : ""}`}>
             {data.map(({name, path})=>{
                 return (
-                    <NavLink className="menu_link" to={path} onClick={()=>setIsOpened(false)} key={name}>{name}</NavLink>
+                    <NavLink className="menu__link" to={path} onClick={()=>setIsOpened(false)} key={name}>{name}</NavLink>
                 )
             })}
         </div>
